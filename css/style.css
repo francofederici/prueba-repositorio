@@ -1,0 +1,152 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* NORMALIZE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* VARIABLES */
+:root {
+    /* Fuentes */
+    --font-title: 'Agbalumo';
+    --font-text: 'Overpass';
+
+    /* Colores */
+    --col-alpha: #252B48;
+    --col-beta: #445069;
+    --col-charlie: #5B9A8B;
+    --col-delta: #F7E987;
+
+}
+
+/* 
+Flexbox:
+
+justify-content alinea los elementos en el eje X;
+
+align-items: alienea los elementos en el eje Y;
+
+flex-flow: es un atajo de flex-direction y flex-wrap, elije en que dirección quieres mostrar los elementos y si pueden crear nuevas lineas de contenido.
+
+align-content: Elije como quieres administrar el espacio entre líneas de contenido.
+
+gap: Espaciado entre elementos.
+*/
+
+header {
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(14, 174, 86, 0.621) 0%, rgba(12, 115, 117, 0.678) 90% );
+    height: 8vh;
+    padding: 0 15px;
+    font-family: var(--font-title);
+    color: rgb(233, 233, 233);
+    text-shadow: black 0 0 15px;
+    box-shadow: rgba(0, 0, 0, 0.341) 0 8px 10px;
+
+    position: fixed;
+    width: 100%;
+
+    display: flex;/* Activar flex en el contenedor */
+    justify-content: space-between;/* Alinea los elementos en el eje X */
+    align-items: center; /* Alinea los elementos en el eje Y */
+}
+
+.flex-container{
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(37,145,251,0.98) 0.1%, rgba(0,7,128,1) 99.8% );
+    height: 50vh;
+
+    display: flex;
+/*     flex-direction: row; */
+
+    justify-content: center;
+    align-items: center;
+/*     flex-wrap: wrap; */
+    align-content:center; 
+
+    flex-flow: row wrap;
+
+    row-gap: 50px;
+    column-gap: 50px;
+}
+
+.caja{
+    height: 100px; 
+    width: 100px;
+    border: solid 1px yellow;
+}
+.roja{
+    background-color: red;
+/*     flex-grow: 1; */
+}
+.verde{
+    background-color: greenyellow;
+/*     flex-shrink: 0; */
+}
+.azul{
+    background-color: rgb(0, 255, 255);
+/*     flex-basis: 300px; */
+}
+.violeta{
+    background-color: violet;
+/*     flex: 100px 0 10; */
+    /* Basis, grow y shrink */
+}
+
+footer{
+    background-color: #183153;
+    color: white;
+    padding: 5% 10%;
+    font-size: large;
+    font-family: var(--font-text);
+
+    display: flex;
+    flex-flow: column;
+    row-gap: 50px;
+}
+
+.footer-hero{
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+}
+
+.footer-hero i{
+    font-size: 2rem;
+}
+
+.adicional{
+    display: flex;
+    gap: 15vw;
+}
+
+.adicional div{
+    display: flex;
+    flex-flow: column;
+    row-gap: 10px;
+}
+
+.adicional div p{
+    color: rgb(73, 118, 180);
+    font-weight: bolder;
+}
+
+.adicional div a, .data div a{
+    color: white;
+    text-decoration: none;
+}
+
+.data{
+    display: flex;
+    justify-content: space-between;
+}
+
+.data div{
+    display: flex;
+    gap: 15px;
+}
+
+.data p{
+    color: gray;
+}
